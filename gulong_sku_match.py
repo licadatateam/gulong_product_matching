@@ -20,7 +20,7 @@ url = 'https://docs.google.com/spreadsheets/d/1WWPj-iEoCoTm4y97iHpRjEKuqsJYrgBzn
 @st.cache_data
 def import_credentials():
     try:
-        creds = st.secrets['secrets']
+        creds = st.secrets['credentials']
     except:
         with open('secrets.json') as file:
             creds = json.load(file)
