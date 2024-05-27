@@ -17,15 +17,16 @@ import cleaner_functions as clean_func
 url = 'https://docs.google.com/spreadsheets/d/1WWPj-iEoCoTm4y97iHpRjEKuqsJYrgBznBGHmyDk2Xo/edit#gid=0'
 
 # import scraped competitor data
-
+@st.cache_data
 def import_credentials():
     try:
-        creds = st.secrets['credentials']
+        creds = st.secrets['secrets']
     except:
         with open('secrets.json') as file:
             creds = json.load(file)
     return creds
 
+@st.cache_data
 def import_sheet(url, creds):
     
     # open gsheet
@@ -116,13 +117,13 @@ def name_match(s, ref,
             try:
                 brand = ref.loc[match[-1], 'brand']
             except:
-                brand = np.NaN
+                brand = None
         else:
-            result = np.NaN
-            brand = np.NaN
+            result = None
+            brand = None
     except:
-        result = np.NaN
-        brand = np.NaN
+        result = None
+        brand = None
     
     if with_brand:
         return pd.Series([result, brand])
