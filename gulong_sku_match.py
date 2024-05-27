@@ -14,10 +14,10 @@ from fuzzywuzzy import fuzz, process
 
 import cleaner_functions as clean_func
 
-url = 'https://docs.google.com/spreadsheets/d/1WWPj-iEoCoTm4y97iHpRjEKuqsJYrgBznBGHmyDk2Xo/edit#gid=0'
+#url = 'https://docs.google.com/spreadsheets/d/1WWPj-iEoCoTm4y97iHpRjEKuqsJYrgBznBGHmyDk2Xo/edit#gid=0'
 
 # import scraped competitor data
-@st.cache_data
+
 def import_credentials():
     try:
         creds = st.secrets['secrets']
@@ -26,7 +26,7 @@ def import_credentials():
             creds = json.load(file)
     return creds
 
-@st.cache_data
+#@st.cache_data
 def import_sheet(url, creds):
     
     # open gsheet
