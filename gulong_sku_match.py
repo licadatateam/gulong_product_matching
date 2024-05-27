@@ -26,7 +26,6 @@ def import_credentials():
             creds = json.load(file)
     return creds
 
-@st.cache_data
 def import_sheet(url, creds):
     
     # open gsheet
