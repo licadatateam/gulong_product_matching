@@ -175,7 +175,7 @@ def match_df(df1, df2):
     Merge dataframes 
     
     '''
-    show_cols = ['product_id', 'sku_name', 'price_gulong']
+    show_cols = ['product_id', 'sku_name', 'price_gulong', 'active']
     left_cols = ['similar_pattern', 'correct_specs',
                  'speed_rating','brand']
     right_cols = ['name', 'correct_specs',
