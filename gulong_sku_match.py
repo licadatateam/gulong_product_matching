@@ -54,7 +54,7 @@ def get_gulong_data() -> pd.DataFrame:
     '''
     show_cols = ['sku_name', 'raw_specs', 'price_gulong', 'name', 'brand', 
                  'width', 'aspect_ratio', 'diameter', 'correct_specs', 
-                 'load_rating', 'speed_rating', 'product_id']
+                 'load_rating', 'speed_rating', 'product_id', 'activity']
     
     try:
         ## 1. Import from redash query api key
