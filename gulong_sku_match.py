@@ -73,7 +73,8 @@ def get_gulong_data() -> pd.DataFrame:
                                 'make' : 'brand',
                                 'section_width' : 'width', 
                                 'rim_size':'diameter', 
-                                'promo' : 'price_gulong'}).reset_index(drop = True)
+                                'promo' : 'price_gulong',
+                                'activity' : 'active'}).reset_index(drop = True)
         
         ## 3. Perform data filtering and cleaning
         df.loc[df['sale_tag']==0, 'price_gulong'] = df.loc[df['sale_tag']==0, 'srp']
