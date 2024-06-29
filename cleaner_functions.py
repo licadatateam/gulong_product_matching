@@ -619,7 +619,7 @@ def clean_model(x : str,
             
         return x
     
-def clean_year(y : str or int) -> [np.NaN, str]:
+def clean_year(y : str or int):# -> [np.NaN, str]
     '''
     Cleans input year to resolve out of range values
     '''
